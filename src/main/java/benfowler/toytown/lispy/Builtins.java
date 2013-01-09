@@ -19,9 +19,9 @@
  *
  */
 
-package au.id.bjf.toylisp;
+package benfowler.toytown.lispy;
 
-import static au.id.bjf.toylisp.Interpreter.read;
+import static benfowler.toytown.lispy.Interpreter.read;
 
 import java.util.Arrays;
 import java.util.LinkedList;

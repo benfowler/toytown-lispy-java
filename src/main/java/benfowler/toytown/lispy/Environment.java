@@ -19,7 +19,7 @@
  *
  */
 
-package au.id.bjf.toylisp;
+package benfowler.toytown.lispy;
 
 import java.util.HashMap;
 

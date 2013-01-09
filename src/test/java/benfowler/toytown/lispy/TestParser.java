@@ -19,11 +19,11 @@
  *
  */
 
-package au.id.bjf.toylisp;
+package benfowler.toytown.lispy;
 
-import static au.id.bjf.toylisp.SpecialForm.DEFINE;
-import static au.id.bjf.toylisp.SpecialForm.IF;
-import static au.id.bjf.toylisp.SpecialForm.LAMBDA;
+import static benfowler.toytown.lispy.SpecialForm.DEFINE;
+import static benfowler.toytown.lispy.SpecialForm.IF;
+import static benfowler.toytown.lispy.SpecialForm.LAMBDA;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.fail;
@@ -31,6 +31,12 @@ import static org.junit.Assert.fail;
 import java.util.List;
 
 import org.junit.Test;
+
+import benfowler.toytown.lispy.Errors;
+import benfowler.toytown.lispy.Interpreter;
+import benfowler.toytown.lispy.Lexer;
+import benfowler.toytown.lispy.ParseException;
+import benfowler.toytown.lispy.Symbol;
 
 public class TestParser {
 

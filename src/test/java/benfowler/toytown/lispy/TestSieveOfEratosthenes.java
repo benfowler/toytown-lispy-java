@@ -19,10 +19,10 @@
  *
  */
 
-package au.id.bjf.toylisp;
+package benfowler.toytown.lispy;
 
-import static au.id.bjf.toylisp.Interpreter.eval;
-import static au.id.bjf.toylisp.Interpreter.read;
+import static benfowler.toytown.lispy.Interpreter.eval;
+import static benfowler.toytown.lispy.Interpreter.read;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
@@ -34,6 +34,8 @@ import java.util.Arrays;
 import java.util.List;
 
 import org.junit.Test;
+
+import benfowler.toytown.lispy.EvalException;
 
 public class TestSieveOfEratosthenes {
 

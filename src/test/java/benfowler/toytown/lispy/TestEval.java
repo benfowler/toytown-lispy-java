@@ -19,11 +19,11 @@
  *
  */
 
-package au.id.bjf.toylisp;
+package benfowler.toytown.lispy;
 
-import static au.id.bjf.toylisp.SpecialForm.BEGIN;
-import static au.id.bjf.toylisp.SpecialForm.IF;
-import static au.id.bjf.toylisp.SpecialForm.QUOTE;
+import static benfowler.toytown.lispy.SpecialForm.BEGIN;
+import static benfowler.toytown.lispy.SpecialForm.IF;
+import static benfowler.toytown.lispy.SpecialForm.QUOTE;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.fail;
 
@@ -36,6 +36,13 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 import org.junit.runners.Parameterized.Parameters;
+
+import benfowler.toytown.lispy.Environment;
+import benfowler.toytown.lispy.Errors;
+import benfowler.toytown.lispy.EvalException;
+import benfowler.toytown.lispy.Interpreter;
+import benfowler.toytown.lispy.LispException;
+import benfowler.toytown.lispy.Symbol;
 
 @RunWith(Parameterized.class)
 public class TestEval {

@@ -19,7 +19,7 @@
  *
  */
 
-package au.id.bjf.toylisp;
+package benfowler.toytown.lispy;
 
 import java.io.PrintStream;
 import java.util.LinkedList;
