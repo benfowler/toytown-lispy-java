@@ -68,8 +68,8 @@ public class Builtins {
 				read("(.car "+ ENV_CLS +" a)")));
 		env.put("cdr", new Proc(strList("a"), env,
 				read("(.cdr "+ ENV_CLS +" a)")));
-		env.put("append", new Proc(strList("a", "b"), env,
-				read("(.append "+ ENV_CLS +" a b)")));
+		env.put("append", new Proc(strList("a"), env,
+				read("(.append "+ ENV_CLS +" a)"), true));
 		env.put("list", new Proc(strList("a"), env,
 				read("(.list "+ ENV_CLS +" a)"), true));
 		env.put("list?", new Proc(strList("a", "b"), env,
@@ -132,6 +132,10 @@ public class Builtins {
     	return equalObject(a, b);
     }
 
+    public static Boolean equal2(final LinkedList<?> a, final LinkedList<?> b) {
+    	return equalObject(a, b);
+    }
+
     private static Boolean equalObject(final Object a, final Object b) {
     	if (a == null && b == null) {
 			return true;
@@ -186,14 +190,12 @@ public class Builtins {
     	}
     }
 
-    public static LinkedList<Object> append(final LinkedList<?> a, final LinkedList<?> b) {
+    public static LinkedList<Object> append(final LinkedList<?> a) {
     	final LinkedList<Object> result = new LinkedList<Object>();
-    	if (a != null) {
-			result.addAll(a);
-		}
-    	if (b != null) {
-			result.addAll(b);
-		}
+    	for (final Object o : a) {
+    		LinkedList<?> l = (LinkedList<?>) o;
+    		result.addAll(l);
+    	}
     	return result;
     }
 
