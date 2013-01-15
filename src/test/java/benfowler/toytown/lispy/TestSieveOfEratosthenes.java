@@ -28,7 +28,7 @@ public class TestSieveOfEratosthenes extends AbstractExternalFileTest {
 
 	@Override
 	protected String getPathToScriptResource() {
-		return "sieve.scheme";
+		return "sieve.sls";
 	}
 
 	@Override

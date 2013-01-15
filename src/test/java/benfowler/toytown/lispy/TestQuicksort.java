@@ -25,7 +25,7 @@ public class TestQuicksort extends AbstractExternalFileTest {
 
 	@Override
 	protected String getPathToScriptResource() {
-		return "quicksort.scheme";
+		return "quicksort.sls";
 	}
 
 	@Override
